@@ -34,8 +34,11 @@ The script will calculate the orbital elements and coordinates of the planets (M
 
 The calculated results will be displayed in the console and stored in two Pandas DataFrames: elementosOrbitaisdf (containing the orbital elements) and coordenadasdf (containing the coordinates).
 
-Contributing
+
+## Contributing
+
 Contributions to this repository are welcome. If you find any issues or want to add new features, please open an issue or submit a pull request.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
