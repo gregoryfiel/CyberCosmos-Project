@@ -1,28 +1,33 @@
-﻿# CyberCosmos-Project
-README - Planet Orbit Calculator
+# CyberCosmos-Project
+
+## README - Planet Orbit Calculator
+
 This repository contains a Python script that calculates the orbital elements and coordinates of the planets in the Solar System. The script uses mathematical formulas and data to determine the positions of the planets at a given date and time.
 
-Installation
+## Installation
+
 To run the code, you need to install the following libraries using pip:
 
 Copy code
 pip install dash
 pip install pandas
 pip install plotly
-Usage
-Clone the repository to your local machine.
 
-Open the Python script planet_orbit_calculator.py in your preferred Python editor or IDE.
+## Usage
 
-Modify the date and time values in the code to the desired values:
+1. Clone the repository to your local machine.
 
-python
-Copy code
+2. Open the Python script `planet_orbit_calculator.py` in your preferred Python editor or IDE.
+
+3. Modify the date and time values in the code to the desired values:
+
+```python
 d = 30  # Day
 m = 5   # Month
 y = 1999  # Year
 horas = 19  # Hours
 minutos = 0  # Minutes
+
 Run the script.
 
 The script will calculate the orbital elements and coordinates of the planets (Mercury, Venus, Earth, Mars, and Jupiter) at the specified date and time.
