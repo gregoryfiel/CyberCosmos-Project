@@ -22,6 +22,8 @@ t = math.floor(367 * y - math.floor((7 *(y + math.floor((m+9)/12)))/4) +
 t += ((horas/24) + (minutos/1440))
 
 #Abaixo, estão as funções utilizadas para o cálculo dos elementos orbitais e coordenadas dos planetas:
+
+#Se eu não me engano, numpy já tem essas funções, mas optei por criar as minhas.
 #Função para converter graus para radianos:
 def deg2rad(theta):
   return(theta*math.pi/180)
@@ -65,6 +67,7 @@ def calcularCoordenadasCart(r, longitudeNodo, argumentoPerielio, v, i):
     return x, y, z
 
 #Função para cálculo das coordenadas eclípticas heliocêntricas:
+#Um conceito muito interessante aplicado na prática, aninhamento de funções.
 def calcularCoordenadasEclip(x, y, z):
     lambda1 = math.atan(y/x) 
     beta1 = math.atan(z/(math.sqrt(x**2+y**2)))
@@ -91,6 +94,8 @@ def adicionarPlaneta(coordenadasdf, planeta, x, y, z, l, b):
     return coordenadasdf
 
 #Cálculo dos elementos orbitais e coordenadas dos planetas:
+#Os comentários a seguir para mercúrio, vale para todos outros planetas.
+
 #Mercúrio:
 #Como o math utiliza apenas radianos, é necessário converter os valores de graus para radianos:
 longitudeNodo = 48.3313 + 3.24587e-5 * t
@@ -373,6 +378,8 @@ coordenadasdf['l (°)'] = coordenadasdf['l (°)'].round(3)
 coordenadasdf['b (°)'] = coordenadasdf['b (°)'].round(3)
 
 #Seção focada no cálculo do baricentro do sistema solar:
+
+#Criando um dataframe com as massas citadas no texto explicativo:
 data = [
     {'Objeto': 'Mercúrio', 'Massa (kg)': 3.3011e23},
     {'Objeto': 'Vênus', 'Massa (kg)': 4.8675e24},
@@ -403,6 +410,7 @@ Xcm = 0
 Ycm = 0
 Zcm = 0
 
+#Calculando as coordenadas do baricentro para cada eixo:
 for index, row in coordenadasdf.iterrows():
     Xcm += (massas[index] * Xk[index])
     Ycm += (massas[index] * Yk[index])
