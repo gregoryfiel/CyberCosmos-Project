@@ -9,10 +9,11 @@ This repository contains a Python script that calculates the orbital elements an
 To run the code, you need to install the following libraries using pip:
 
 Copy code
+```
 pip install dash
 pip install pandas
 pip install plotly
-
+```
 ## Usage
 
 1. Clone the repository to your local machine.
@@ -27,7 +28,7 @@ m = 5   # Month
 y = 1999  # Year
 horas = 19  # Hours
 minutos = 0  # Minutes
-
+```
 Run the script.
 
 The script will calculate the orbital elements and coordinates of the planets (Mercury, Venus, Earth, Mars, and Jupiter) at the specified date and time.
