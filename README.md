@@ -1,8 +1,8 @@
 # CyberCosmos-Project
 
-## README - Planet Orbit Calculator
+## Planet Orbit Calculator
 
-This repository contains a Python script that calculates the orbital elements and coordinates of the planets in the Solar System. The script uses mathematical formulas and data to determine the positions of the planets at a given date and time.
+This repository contains a Python script that calculates the orbital elements, coordinates, and barycenter of the planets in the Solar System. The script uses mathematical formulas and data to determine the positions of the planets at a given date and time, as well as the barycenter of the Solar System.
 
 ## Installation
 
